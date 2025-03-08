@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 import base64
 import os
-GEMINI_API_KEY=st.sidebar.text_input(label="Enter your Gemini-pro API key")
+GEMINI_API_KEY=st.sidebar.text_input(label="Enter your Gemini-pro API key",type="password"))
 load_dotenv()
 import warnings
 warnings.filterwarnings("ignore")
