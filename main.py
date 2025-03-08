@@ -69,6 +69,8 @@ elif file_upload:
 else:
     encode=None
 submit=st.button("submit the image")
+text_area=st.text_area("Make the needed adjustments.",height=100)
+
 
 prompt="""
 
@@ -88,6 +90,10 @@ messages = [
             {                                                             #error  Object of type set is not JSON serializab
                 "type": "image_url",
                 "image_url": f"data:image/jpeg;base64,{encode}" 
+            },
+            {
+                "type":"text",
+                "text":f" coustomize the by {text_area}"
             }
         ] 
     }  
