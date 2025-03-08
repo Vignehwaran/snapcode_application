@@ -69,7 +69,7 @@ elif file_upload:
 else:
     encode=None
 submit=st.button("submit the image")
-text_area=st.text_area("Make the needed adjustments.",height=100)
+text_area=st.text_area("Make the needed adjustments.",height=100)  
 
 
 prompt="""
