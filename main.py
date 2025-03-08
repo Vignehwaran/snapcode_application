@@ -52,7 +52,7 @@ Real-Time Processing: Ensures quick response time for seamless user experience.
 st.sidebar.info("""About the Developer 
 Vicky, A passionate Artificial Intelligence and Data Science student, is the mastermind behind this innovative chatbot. Known for his technical expertise and problem-solving skills, he developed this chatbot to simplify the process of converting Snapcodes into raw images and further transforming them into HTML & CSS.""")
 
-camera_disable= file_upload is not None
+camera_disabled= file_upload is not None
 if st. button("close the camera"):
     camera_disabled=True
 if st.button("open the camera"):
@@ -61,7 +61,7 @@ if st.button("open the camera"):
         st.markdown(body="Please clear the image",unsafe_allow_html=False)
     else:
         camera_disabled=False
-photo=st.camera_input("take a photo",disabled=camera_disable)
+photo=st.camera_input("take a photo",disabled=camera_disabled)
 if photo:
     encode=get_file(photo)
 elif file_upload:
