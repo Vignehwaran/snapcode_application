@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 import base64
 import os
-api_key=os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY=st.sidebar.text_input(label="Enter your Gemini-pro API key")
 load_dotenv()
 import warnings
 warnings.filterwarnings("ignore")
@@ -20,7 +20,7 @@ warnings.filterwarnings("ignore")
 
 def get_response(input_text):
     model=ChatGoogleGenerativeAI(
-        api_key=api_key,
+        api_key=GEMINI_API_KEY,
         model="gemini-2.0-flash",
         temperature=0.6 
     )
