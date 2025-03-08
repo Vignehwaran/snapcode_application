@@ -22,7 +22,7 @@ def get_response(input_text):
     model=ChatGoogleGenerativeAI(
         api_key=GEMINI_API_KEY,
         model="gemini-2.0-flash",
-        temperature=0.6 
+        temperature=1 
     )
     response=model.invoke(input_text)
     return response.content
